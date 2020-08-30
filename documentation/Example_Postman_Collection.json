@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "76839860-e599-45d5-9d88-258b40073f1f",
+		"name": "Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{url}}",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "capture led",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"color\": \"red\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{url}}/leds/capture",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"leds",
+						"capture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "distribute led energize",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"action\": \"energize\",\n\t\"color\": \"red\",\n\t\"energized\": \"false\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{url}}/leds/distribute",
+					"protocol": "https",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"leds",
+						"distribute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "distribute led flash",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"action\": \"energize\",\n\t\"color\": \"red\",\n\t\"energized\": \"false\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "192.168.1.7/leds/distribute",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"7"
+					],
+					"path": [
+						"leds",
+						"distribute"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
